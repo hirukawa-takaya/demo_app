@@ -1,0 +1,5 @@
+<%= @topics.each do |topic| %>
+  <%= topic.user.name %><br>
+  <%= image_tag topic.image.url %><br>
+  <%= topic.description %><br>
+<% end %>

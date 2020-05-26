@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params_user)
     if @user.save
-      redirect_to root_path, notice: '新規登録に成功しました'
+      redirect_to root_path, success: 'だん'
     else
-      flash.now[:alart] = '新規登録に失敗しました'
+      flash.now[:alart] = 'しっぱい'
       render :new
     end
   end

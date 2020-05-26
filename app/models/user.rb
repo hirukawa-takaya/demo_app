@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   
   has_secure_password
+  
+  has_many :topics
 end
