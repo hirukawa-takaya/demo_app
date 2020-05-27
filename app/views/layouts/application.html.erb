@@ -21,7 +21,7 @@
       <ul>
         <% if logged_in? %>
         <li><%= link_to "| | みんなのとうこう |", topics_path %></li>
-        <li><%= link_to "| | おきにいり |", root_path %></li>
+        <li><%= link_to "| | おきにいり |", favorites_index_path %></li>
         <li><%= link_to "| あっぷろーど |", new_topic_path %></li>
         <li><%= link_to "| ろぐあうと | |", logout_path, method: :delete %></li>
         <% else %>
