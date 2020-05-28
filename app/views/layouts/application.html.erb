@@ -16,18 +16,18 @@
     
     <div class="header-menu">
       <%= link_to root_path do %>
-          <h1>| でもあぷり |</h1>
+          <h1><%= link_to "でもあぷり", root_path, class:'btn-vertical-border'%></h1>
       <% end %>
       <ul>
         <% if logged_in? %>
-        <li><%= link_to "| | みんなのとうこう |", topics_path %></li>
-        <li><%= link_to "| | おきにいり |", favorites_index_path %></li>
-        <li><%= link_to "| あっぷろーど |", new_topic_path %></li>
-        <li><%= link_to "| ろぐあうと | |", logout_path, method: :delete %></li>
+        <li><%= link_to "みんなのとうこう", topics_path, class:'btn-vertical-border'%></li>
+        <li><%= link_to "おきにいり", favorites_index_path, class:'btn-vertical-border'%></li>
+        <li><%= link_to "あっぷろーど", new_topic_path, class:'btn-vertical-border'%></li>
+        <li><%= link_to "ろぐあうと", logout_path, method: :delete, class:'btn-vertical-border'%></li>
         <% else %>
-        <li><%= link_to "| | さいんあっぷ |", new_user_path %></li>
-        <li><%= link_to "| ろぐいん |",       login_path  %></li>
-        <li><%= link_to "| つかいかた | |",   homes_about_path %></li>
+        <li><%= link_to "さいんあっぷ", new_user_path, class:'btn-vertical-border'%></li>
+        <li><%= link_to "ろぐいん", login_path, class:'btn-vertical-border'%></li>
+        <li><%= link_to "つかいかた", homes_about_path, class:'btn-vertical-border'%></li>
         <% end %>
       </ul>
     </div>

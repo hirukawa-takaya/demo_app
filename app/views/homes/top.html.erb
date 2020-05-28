@@ -1,0 +1,6 @@
+ <% if !logged_in? %>
+  <div class="top-btn">
+  <%= link_to "さいんあっぷ", new_user_path, class:'btn-vertical-border'%>
+  <%= link_to "ろぐいん", login_path, class:'btn-vertical-border'%>
+</div>
+<% end %>
